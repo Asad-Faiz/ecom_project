@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import '../models/product.dart';
 import '../models/category.dart';
@@ -97,6 +99,7 @@ class ApiService {
       );
 
       if (response.statusCode == 200) {
+        // log("response is ${response.data}");
         final Map<String, dynamic> data = response.data;
         final List<dynamic> productsList = data['products'];
 

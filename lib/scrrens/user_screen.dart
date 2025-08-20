@@ -63,6 +63,7 @@ class _UserScreenState extends State<UserScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           AppWidget.largeTitle(
+                            fontSize: 14,
                             text: "Muhammad Asad Faiz",
                             color: AppColors.whiteColor,
                           ),
@@ -96,17 +97,17 @@ class _UserScreenState extends State<UserScreen> {
                 padding: const EdgeInsets.only(top: 10),
                 child: Column(
                   children: [
-                    _buildMenuItem(
+                    menuItem(
                       icon: "ic_setting.png",
                       title: "Kontoinstallningar",
                       onTap: () {},
                     ),
-                    _buildMenuItem(
+                    menuItem(
                       icon: "ic_cash.png",
                       title: "Mina betalmetoder",
                       onTap: () {},
                     ),
-                    _buildMenuItem(
+                    menuItem(
                       icon: "ic_support.png",
                       title: "Support",
                       onTap: () {},
@@ -121,7 +122,7 @@ class _UserScreenState extends State<UserScreen> {
     );
   }
 
-  Widget _buildMenuItem({
+  menuItem({
     required String icon,
     required String title,
     required VoidCallback onTap,

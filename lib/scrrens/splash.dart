@@ -51,7 +51,12 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppWidget.mainHeading(text: 'My Store'),
+                Padding(
+                  padding: EdgeInsetsGeometry.only(
+                    top: MediaQuery.sizeOf(context).width * 0.05,
+                  ),
+                  child: AppWidget.mainHeading(text: 'My Store'),
+                ),
 
                 Padding(
                   padding: EdgeInsets.only(
